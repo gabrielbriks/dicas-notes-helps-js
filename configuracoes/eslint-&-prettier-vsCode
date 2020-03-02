@@ -1,0 +1,81 @@
+Padronização de Código: Exemplo com React
+	Temos acesso a algumas ferramentas como ESLint, Prettier e EditorConfig que facilitam a inspeção do código para 
+    validar essas regras e até automatizam a correção em alguns momentos.
+
+	- Recursos que estaremos utilizando :
+		*ESLint
+		*Prettier
+		*EditorConfig
+		*Style Guide - AirBnb
+
+		extension VsCode: eslint, prettier - code
+
+	Também estaremos utilizando um Style Guide(series de regras) do AirBnb.
+
+ESLint:
+	Ira verificar se o nosso código esta batendo com as regras que foi setada
+
+Prettier:	
+	Ajuda a automatizar a correção e formatação de nosso código durante o desenvolvimento seguindo algumas regras que 
+    iremos adicionar.  
+
+# Iniciando:
+	
+	1- Create react app:
+
+	2- Install dependence ESLint:
+		- yarn add eslint -D
+
+	3- Realizando o init do eslint
+		- yarn run eslint --init
+
+	4- Apos o init, ele ira realizar algumas perguntas, e suas respostas foram:
+		? What type of modules does your project use? >> JavaScript modules (import/export)
+		? Which framework does your project use? >> React
+		? Does your project use TypeScript? >> No
+		? Where does your code run? >> Browser
+		? How would you like to define a style for your project? >> Use a popular style guide
+		? Which style guide do you want to follow? >> Airbnb: https://github.com/airbnb/javascript
+		? What format do you want your config file to be in? >> JSON
+
+		 Would you like to install them now with npm? (Y/n) >> n
+		 * Para essa resposta em especial, estaremos copiando os pacotes que ele citou, e iremos uitlizar o yarn para realizar a instalação.
+
+		 packages citadas: 
+		 eslint-plugin-react@^7.14.3 eslint-config-airbnb@latest eslint@^5.16.0 || ^6.1.0 eslint-plugin-import@^2.18.2 
+         eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react-hooks@^1.7.0
+
+	5- Após essas configurações iniciais, podemos observar que ele criou um arquivo com o seguinte nome: ".eslintrc.json"
+		- adicione as regras como citada na aula: https://www.youtube.com/watch?v=TI4v4Y8yRjw
+
+	6- Realize a instalação da extensão "Prettier - Code" no VsCode
+		- Realize o reload window.
+
+	7- Acesse as configurações do VsCode em JSON: CTRL + SHIFT + P
+		- Adicione o seguinte code: 
+		´´´´
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			  "[javascript]": {
+			    "editor.defaultFormatter": "esbenp.prettier-vscode",
+			    "editor.formatOnSave": true
+			  }
+		´´´´
+	7.1- para a integração do prettier com o eslint adicione o seguinte code:
+	´´´´
+        {
+		  //Integrando Prettier com ESLint
+		  "editor.codeActionsOnSave": {
+		    // For ESLint
+		    "source.fixAll.eslint": true,
+		    // For TSLint
+		    "source.fixAll.tslint": true,
+		    // For Stylelint
+		    "source.fixAll.stylelint": true
+		},
+    ´´´´
+
+# Por fim temos uma configuração bem bacana para ajudar na padronização dos nossos código 
+
+#Dica
+	StyleGuide para o nodeJS: "stardart"
+				para o React: "AirBnb"
