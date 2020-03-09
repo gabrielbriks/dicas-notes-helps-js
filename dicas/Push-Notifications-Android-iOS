@@ -5,4 +5,8 @@ Link: https://medium.com/rocketseat/push-notification-no-ios-e-android-com-react
 
 Link Documentation: https://documentation.onesignal.com/docs?gclid=Cj0KCQjw0pfzBRCOARIsANi0g0sYBo0i-hHlx4prnlOIBtJXBR7EecbaNzpPTKkeh10iY2d7Qfi32nIaAm0pEALw_wcB
 
-No artigo ele utiliza uma ferramenta para notificação chamada "OneSignal".
+No artigo ele utiliza uma ferramenta para notificação chamada "OneSignal", que irá ser integrado
+com o firebase. 
+
+#Lembrete: Essa não é uma implementação para fazer com o expo kit.
+
