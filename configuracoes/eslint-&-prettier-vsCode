@@ -1,4 +1,6 @@
-Padronização de Código: Exemplo com React
+Ajuda com Padronização/Correção de Código utilizando ESLint, Prettier:
+Exemplo com React
+
 	Temos acesso a algumas ferramentas como ESLint, Prettier e EditorConfig que facilitam a inspeção do código para 
     validar essas regras e até automatizam a correção em alguns momentos.
 
